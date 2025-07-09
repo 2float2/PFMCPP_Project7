@@ -1,4 +1,7 @@
 #pragma once
+#include <string>
+
+struct Character;
 
 struct DragonSlayer : Character
 {
