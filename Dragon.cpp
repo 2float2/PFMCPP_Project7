@@ -6,7 +6,8 @@
 Dragon::Dragon( const std::string& name_, int hp_, int armor_)
     : Character(hp_, armor_, 80),
     name(name_)
-{ }
+{
+}
 
 
 void Dragon::attack(Character &other)
