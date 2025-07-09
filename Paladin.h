@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+#include "Character.h"
 
 struct Character;
 
@@ -12,3 +12,4 @@ struct Paladin : Character
 private:
     const std::string name;
 };
+

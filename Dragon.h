@@ -1,6 +1,4 @@
 #pragma once
-#include <string>
-
 #include "Character.h"
 
 struct Dragon : Character
