@@ -1,5 +1,5 @@
 #pragma once
-#include "Character.h"
+#include "Character.h" // already includes Item.h
 
 struct Character;
 
@@ -11,4 +11,5 @@ struct DragonSlayer : Character
     void attack(Character& other) override;
 private:
     const std::string name;
+    std::unique_ptr<Item> attackItem;
 };
