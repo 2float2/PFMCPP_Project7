@@ -3,8 +3,15 @@
 #include <cassert>
 
 //DragonSlayer::DragonSlayer
+DragonSlayer::DragonSlayer( const std::string& name_, int hp_, int armor_)
+    : Character(hp_, armor_, 4)
+{ }
 
 //DragonSlayer::getName
+const std::string& DragonSlayer::getName()
+{
+    return name;
+}
 
 void DragonSlayer::attack(Character& other)
 {
@@ -28,3 +35,7 @@ void DragonSlayer::attack(Character& other)
 }
 
 //DragonSlayer::getStats
+std::string DragonSlayer::getStats()
+{
+    return "Dragon stats";
+}
