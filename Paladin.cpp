@@ -1,8 +1,10 @@
 #include "Paladin.h"
+#include "Utility.h"
 
 // Paladin::Paladin
 Paladin::Paladin( const std::string& name_, int hp_, int armor_)
-    : Character(hp_, armor_, 10)
+    : Character(hp_, armor_, 10),
+    name(name_)
 { }
 
 // Paladin::getName
@@ -14,5 +16,5 @@ const std::string& Paladin::getName()
 // Paladin::getStats
 std::string Paladin::getStats()
 {
-    return "Dragon stats";
+    return getCharacterStats(this);
 }
