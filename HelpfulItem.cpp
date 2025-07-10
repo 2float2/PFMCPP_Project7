@@ -4,5 +4,5 @@
 
 void HelpfulItem::use(Character *character)
 {
-    useDefensiveItem(character, *this);
+    useHelpfulItem(character, this);
 }

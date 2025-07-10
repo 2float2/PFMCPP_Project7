@@ -1,7 +1,7 @@
 #include "DragonSlayer.h"
 #include "Dragon.h"
 #include "Utility.h"
-#include <cassert>
+#include "AttackItem.h"
 
 //DragonSlayer::DragonSlayer
 DragonSlayer::DragonSlayer( const std::string& name_, int hp_, int armor_)
@@ -10,6 +10,7 @@ DragonSlayer::DragonSlayer( const std::string& name_, int hp_, int armor_)
 {
     helpfulItems = makeHelpfulItems(4); 
     defensiveItems = makeDefensiveItems(2);
+    attackItem = std::unique_ptr<AttackItem>( new AttackItem() );
 }
 
 //DragonSlayer::getName
@@ -34,6 +35,11 @@ void DragonSlayer::attack(Character& other)
         {
             attackItem->use(this);
             attackItem.reset();
+        }
+
+        while( dragon->getHP() > 0 )
+        {
+            dragon->takeDamage(attackDamage);
         }
         
     }
