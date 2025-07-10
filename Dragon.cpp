@@ -33,5 +33,5 @@ const std::string& Dragon::getName()
 //Dragon::getStats
 std::string Dragon::getStats()
 {
-    return getCharacterStats(this);;
+    return getCharacterStats(this);
 }
