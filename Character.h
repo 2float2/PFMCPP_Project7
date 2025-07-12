@@ -63,6 +63,7 @@ protected:
     bool isDefending = false;
 private:
     std::unique_ptr<int> initialHitPoints, initialArmorLevel, initialAttackDamage;
-    
+
+    void lvlUpStats(int&, int&);
     void attackInternal(Character& other);
 };
